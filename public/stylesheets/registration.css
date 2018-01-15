@@ -1,0 +1,60 @@
+/*bcz*/
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-group {
+  
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #fff;
+
+}
+
+
+.form-group .form-group-heading,
+.form-group .checkbox {
+  margin-bottom: 10px;
+}
+.form-group .checkbox {
+  font-weight: 400;
+}
+.form-group .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding:5px;
+  font-size: 16px;
+}
+.form-group .form-control:focus {
+  z-index: 2;
+}
+.form-group input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-group input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}

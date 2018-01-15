@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="/stylesheets/registration.css" >
+  
+  <div class="container" style="width:780px"> 
+      {{#infoss4 }}
+ 
+<form class="form-control" method="post" enctype="multipart/form-data" action='/user/showresult/edit/{{this._id}}'>
+
+   <div class="form-group border border-info rounded-top clearfix">
+
+     <h2  class="text-center">Upload Result Edit </h2>
+<hr class="featurette-divider">
+
+
+<br>
+
+<div class="card-text">
+
+     <label> Student Name :</label>
+   <input class="form-control" type="text" name="rstudentname" value="{{this.rstudentname}}">
+   <br>
+
+   <label for="centermobile"> Date of Birth :</label>
+  <input class="form-control" type="date" name="rdob" value="{{this.rdob}}">
+<br>
+
+ <label for="directorname"> Date of Joining :</label>
+<input class="form-control" type="date" name="rdoj" value="{{this.rdoj}}">
+<br>
+
+ <label for="centerphone"> Course Name  :</label>
+<input class="form-control" type="text" name="rcourse" value="{{this.rcourse}}">
+<br>
+
+  <label for="centeremail"> Father's Name :</label>
+ <input class="form-control" type="text" name="rfathername" value="{{this.rfathername}}">
+<br>
+
+ <label for="centeraddress">  Roll Number :</label>
+<input class="form-control" type="text" name="rrollnumber" value="{{this.rrollnumber}}">
+  <br>
+
+ <label for="centerlandmark"> Year :</label>
+<input class="form-control" type="text" name="ryear" value="{{this.ryear}}">
+<br>
+
+<label for="centerimage"><strong>Upload Marksheet :&nbsp;&nbsp;&nbsp; </strong> </label>
+<input class="form-control" type="file" name="uploadmarksheet" value="{{this.uploadmarksheet}}" required="uploadmarksheet" >
+<br>
+
+<label for="centerimage"><strong>Upload Certificate :&nbsp;&nbsp;&nbsp; </strong> </label>
+<input class="form-control" type="file" name="uploadcertificate" value="{{this.uploadcertificate}}" required="uploadcertificate">
+<br>
+<h5>Note: Upload Images only support jpeg, jpg or png formats.</h5>
+<br>
+ <input class="btn btn-info" type="submit" value="Submit">
+
+</div>
+
+
+  </div>
+  </form>
+    {{/infoss4}}
+
+
+          <hr class="featurette-divider">
+          </div>
+
+          <!-- ../{{this.uploadmarksheet}}  -->

@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/stylesheets/registration.css" >
+  
+  <div class="container" style="width:780px">  
+<form class="form-control">
+
+   <div class="form-group border border-info rounded-top clearfix">
+
+     <h4  class="text-center">Show Register Edit And Delete</h4>
+<hr class="featurette-divider">
+
+<div class="card-text">
+    {{#infoss }}
+   <h5 class="text-capitalize"> <span> <label> Student Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span> {{this.fullname}}</h5>
+  <hr class="featurette-divider">
+   <h5 class="text-capitalize"> <span> <label for="contact"> Contact Number:&nbsp;&nbsp;&nbsp;&nbsp;</label></span>{{this.contact}}</h5>
+<hr class="featurette-divider">
+   <h5 class="text-capitalize"> <span> <label for="branch"> Branch or Center :&nbsp;&nbsp;</label></span>{{this.branch}}</h5>
+<hr class="featurette-divider">
+   <h5 class="text-capitalize"> <span> <label for="course"> Course Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span>{{this.course}}</h5>
+ <hr class="featurette-divider">
+   <h5 class="text-capitalize"> <span> <label for="training"> Training Course :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span>{{this.training}}</h5>
+<hr class="featurette-divider">
+   <h5 class="text-capitalize"> <span> <label for="qualification"> Qualification :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span> {{this.qualification}}</h5>
+<hr class="featurette-divider">
+   <h5 class="text-capitalize"> <span> <label for="dob"> Date of Birth :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span> {{this.dob}}</h5>
+ <hr class="featurette-divider">
+  <h5 class="text-capitalize"> <span> <label for="ryear"> Email Address :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span> {{this.email}}</h5>
+ <hr class="featurette-divider">
+  <h5 class="text-capitalize"> <span> <label for="ryear"> Address :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span> {{this.address}}</h5>
+ <hr class="featurette-divider">
+ <a class="btn btn-warning" role="button" href='/registers/edit/{{this._id}}' >EDIT</a>
+ <a class="btn btn-danger delete-register" role="button" href='#' data-id={{this._id}} >DELETE</a>
+ <a class="btn btn-info" role="button" href='/user/showregistera' >BACK</a>
+
+   {{/infoss}}
+</div>
+
+
+  </div>
+  </form>
+
+
+
+          <hr class="featurette-divider">
+          </div>
+
+          <!-- ../{{this.uploadmarksheet}}  -->

@@ -1,0 +1,119 @@
+ <link href="/stylesheets/carousel.css" rel="stylesheet">
+     <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/main.css" rel="stylesheet">
+    <link href="/stylesheets/font-awesome.min.css" rel="stylesheet">
+    <link href="/stylesheets/prism.css" rel="stylesheet" />
+    <link href="/stylesheets/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+
+  <main role="main">
+         
+  
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+ 
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+     
+        <div class="carousel-inner">
+             {{# each coverers }}
+           <div class="carousel-item {{this.activeOrNot}}">
+            <img class="first-slide" src="../{{this.coverphoto}}" alt="First slide"  data-src="holder.js/500x500/auto">
+            <div class="container">
+              <div class="carousel-caption ">
+                <h1>{{this.covertext}}</h1>
+              </div>     
+            </div>
+          </div>
+               {{/each}} 
+        </div>
+               
+
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
+ 
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+<div class="green">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 centered">
+          <div id="nt-example1-container">
+            <h1>News And Event</h1>
+
+            <i class="fa fa-arrow-up" id="nt-example1-prev"></i>
+           
+                    <ul id="nt-example1">
+                       {{# each coverers }}
+                        <li>{{this.covertext}}</li>
+                        {{/each}}
+                    </ul>
+                    
+                    <i class="fa fa-arrow-down" id="nt-example1-next"></i>
+                </div>
+        </div>
+        
+        
+      <!-- /.col-lg-4 -->
+          <div class="col-md-5 centered">
+            <img class="rounded-circle" src="/images/UMA logo.png" alt="Generic placeholder image" width="140" height="140">
+            
+                <h2>MESSAGE BY M.D.</h2>
+
+            <p>We mould our students to be role models in the academic arena by providing the best infrastructure and quality education through our enlightened Management and committed Faculty, who ensure knowledge transfer, motivate, instill research aptitude and infuse ethical and cultural values to transform our students into disciplined and competent citizens in order to improve the quality of life.</p>
+          </div>
+        
+        
+      </div>
+    </div>
+  </div>
+
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+
+    
+
+    </main>
+
+       <!-- News Ticker JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script
+  src="https://code.jquery.com/jquery-1.10.2.min.js"
+  integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg="
+  crossorigin="anonymous"></script>
+    <script src="/javascripts/chart.js"></script>
+    <script src="/javascripts/prism.js"></script>
+    <script src="/javascripts/jquery.mCustomScrollbar.min.js"  crossorigin="anonymous"></script>
+    <script src="/javascripts/jquery.newsTicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+
+  <script>      
+       var nt_example1 = $('#nt-example1').newsTicker({
+                row_height: 80,
+                max_rows: 3,
+                duration: 4000,
+                prevButton: $('#nt-example1-prev'),
+                nextButton: $('#nt-example1-next')
+            });
+      
+      
+  </script>
+  
+
+<script src="https://use.fontawesome.com/077166cc8f.js"></script>

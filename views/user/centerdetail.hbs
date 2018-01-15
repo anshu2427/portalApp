@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/stylesheets/registration.css" >
+  
+  <div class="container" style="width:780px">  
+<form class="form-control">
+
+   <div class="form-group border border-info rounded-top clearfix">
+
+     <h4  class="text-center">Center Details</h4>
+<hr class="featurette-divider">
+
+<div class="card-text">
+    {{#infoss1 }}
+   <h5 class="text-capitalize"> <span> <label> Center Name :&nbsp;&nbsp;&nbsp;</label></span> {{this.centername}}</h5>
+  <hr class="featurette-divider">
+   <h5 class="text-capitalize"> <span> <label for="rfathername"> Center Mobile:&nbsp;&nbsp;&nbsp;&nbsp;</label></span>{{this.centermobile}}</h5>
+<hr class="featurette-divider">
+   <h5 class="text-capitalize"> <span> <label for="directorname"> Director Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span>{{this.directorname}}</h5>
+<hr class="featurette-divider">
+   <h5 class="text-capitalize"> <span> <label for="centerphone">  Phone No. :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span>{{this.centerphone}}</h5>
+ <hr class="featurette-divider">
+   <h5 class="text-capitalize"> <span> <label for="centeremail"> Center Email :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span>{{this.centeremail}}</h5>
+<hr class="featurette-divider">
+   <h5 class="text-capitalize"> <span> <label for="centeraddress"> Center Address :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span> {{this.centeraddress}}</h5>
+<hr class="featurette-divider">
+   <h5 class="text-capitalize"> <span> <label for="centerlandmark"> Center Landmark :&nbsp;&nbsp;&nbsp;&nbsp;</label></span> {{this.centerlandmark}}</h5>
+ <hr class="featurette-divider">
+ <label for="ryear"><strong>Center Image :&nbsp;&nbsp;&nbsp; </strong> </label>
+  <div class="card" style="width:700px">
+    <img class="card-img-top" src="../{{this.centerimage}}" alt="Card image" style="width:100%">
+
+  </div>
+           <a class="btn btn-info" role="button" href='/centers' >BACK</a>
+
+   {{/infoss1}}
+</div>
+
+
+  </div>
+  </form>
+
+
+
+          <hr class="featurette-divider">
+          </div>
+
+          <!-- ../{{this.uploadmarksheet}}  -->

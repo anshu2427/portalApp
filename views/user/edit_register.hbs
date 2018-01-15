@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="/stylesheets/registration.css" >
+  
+
+  <div class="container" style="width:780px"> 
+      {{#infoss }}
+ 
+<form class="form-control" method="post" action='/user/register/edit/{{this._id}}'>
+
+   <div class="form-group border border-info rounded-top clearfix">
+
+     <h2  class="text-center">Register Edit </h2>
+<hr class="featurette-divider">
+
+
+<br>
+
+<div class="card-text">
+
+     <label> Full Name :</label>
+   <input class="form-control" type="text" name="fullname" value="{{this.fullname}}">
+   <br>
+
+   <label for="contact"> contact:</label>
+  <input class="form-control" type="text" name="contact" value="{{this.contact}}">
+<br>
+
+ <label for="branch"> branch Name :</label>
+<input class="form-control" type="text" name="branch" value="{{this.branch}}">
+<br>
+
+ <label for="course"> Course :</label>
+<input class="form-control" type="text" name="course" value="{{this.course}}">
+<br>
+
+  <label for="training"> Training:</label>
+ <input class="form-control" type="text" name="training" value="{{this.training}}">
+<br>
+
+ <label for="qualification"> Qualification :</label>
+<input class="form-control" type="text" name="qualification" value="{{this.qualification}}">
+  <br>
+
+ <label for="dob"> DOB :</label>
+<input class="form-control" type="text" name="dob" value="{{this.dob}}">
+<br>
+
+ <label for="email"> Email :</label>
+ <input class="form-control" type="text" name="email" value="{{this.email}}">
+<br>
+
+ <label for="address"> Address  :</label>
+ <input class="form-control" type="text" name="address" value="{{this.address}}">
+<br>
+ <input class="btn btn-info" type="submit" value="Submit">
+
+</div>
+
+
+  </div>
+  </form>
+    {{/infoss}}
+
+
+          <hr class="featurette-divider">
+          </div>
+
+          <!-- ../{{this.uploadmarksheet}}  -->

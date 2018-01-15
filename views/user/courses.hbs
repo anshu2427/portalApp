@@ -1,0 +1,146 @@
+
+<link rel="stylesheet" href="/stylesheets/registration.css" >
+
+<div class="container" style="width:700px" >  
+  <div class="row">
+
+
+    <form class="form-control" method="post" action="/user/getresults">
+     <div class="form-group border border-info rounded-top clearfix">
+
+
+       <h2  class="text-uppercase text-center">UTEI COURSES</h2>
+       <hr class="featurette-divider">
+
+       <div id="accordion">
+        <div class="card">
+          <div class="card-header alert alert-success">
+            <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+              Computer Software Courses
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse">
+            <div class="card-body">
+              {{#each regist}}
+              {{#ifCond this.maincoursename '==' "Computer Software Courses" }}
+             <h5> <a class="dropdown-item text-capitalize" role="button" href='/coursedetails/{{this._id}}' >{{this.subcoursename}}</a></h5>
+              {{/ifCond}}
+              {{/each}}
+
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header alert alert-danger">
+            <a class="card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+              Computer Hardware Courses
+            </a>
+          </div>
+          <div id="collapseTwo" class="collapse show">
+            <div class="card-body">
+              {{#each regist}}
+              {{#ifCond this.maincoursename '==' "Computer Hardware Courses" }}
+             <h6> <a class="dropdown-item text-capitalize" role="button" href='/coursedetails/{{this._id}}' >{{this.subcoursename}} </a></h6>
+              {{/ifCond}}
+              {{/each}}
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header alert alert-warning">
+            <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+              Electronic Courses
+            </a>
+          </div>
+          <div id="collapseThree" class="collapse">
+            <div class="card-body">
+             {{#each regist}}
+             {{#ifCond this.maincoursename '==' "Electronic Courses" }}
+            <h5> <a class="dropdown-item text-capitalize" role="button" href='/coursedetails/{{this._id}}' >{{this.subcoursename}} </a></h5>
+             {{/ifCond}}
+             {{/each}}
+           </div>
+         </div>
+       </div>
+       <div class="card">
+        <div class="card-header alert alert-info">
+          <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+            Refrigeration / Air Conditioning
+          </a>
+        </div>
+        <div id="collapseFour" class="collapse">
+          <div class="card-body">
+            {{#each regist}}
+            {{#ifCond this.maincoursename '==' "Refrigeration / Air Conditioning" }}
+           <h5> <a class="dropdown-item text-capitalize" role="button" href='/coursedetails/{{this._id}}' >{{this.subcoursename}} </a></h5>
+            {{/ifCond}}
+            {{/each}}
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header alert alert-dark">
+          <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+            Electrical Courses
+          </a>
+        </div>
+        <div id="collapseFive" class="collapse">
+          <div class="card-body">
+            {{#each regist}}
+            {{#ifCond this.maincoursename '==' "Electrical Courses" }}
+           <h5> <a class="dropdown-item text-capitalize" role="button" href='/coursedetails/{{this._id}}' >{{this.subcoursename}}  </a></h5>
+            {{/ifCond}}
+            {{/each}}
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header alert alert-secondary">
+          <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+            Special Capsule Courses
+          </a>
+        </div>
+        <div id="collapseSix" class="collapse">
+          <div class="card-body">
+            {{#each regist}}
+            {{#ifCond this.maincoursename '==' "Special Capsule Courses" }}
+           <h5> <a class="dropdown-item text-capitalize" role="button" href='/coursedetails/{{this._id}}' >{{this.subcoursename}} </a></h5>
+            {{/ifCond}}
+            {{/each}}
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header alert alert-primary">
+          <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+            Industrial Safety Courses
+          </a>
+        </div>
+        <div id="collapseSeven" class="collapse">
+          <div class="card-body">
+            {{#each regist}}
+            {{#ifCond this.maincoursename '==' "Industrial Safety Courses" }}
+           <h5> <a class="dropdown-item text-capitalize" role="button" href='/coursedetails/{{this._id}}' >{{this.subcoursename}} </a></h5>
+            {{/ifCond}}
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/stylesheets/registration.css" >
+  
+  <div class="container" style="width:780px">  
+<form class="form-control">
+
+   <div class="form-group border border-info rounded-top clearfix">
+
+     <h4  class="text-center">Show Course Details</h4>
+<hr class="featurette-divider">
+
+<div class="card-text">
+    {{#infoss2 }}
+   <h5 class="text-capitalize"> <span> <label> Course Name :&nbsp;&nbsp;&nbsp;</label></span> {{this.subcoursename}}</h5>
+  <hr class="featurette-divider">
+   <h5 class="text-capitalize"> <span> <label for="rfathername"> Training:&nbsp;&nbsp;&nbsp;&nbsp;</label></span>{{this.tsc}}</h5>
+<hr class="featurette-divider">
+   <h5 class="text-capitalize"> <span> <label for="rcourse"> Branch Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span>{{this.bcn}}</h5>
+<hr class="featurette-divider">
+<label for="rrollnumber">Description :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+   <h5 class="text-capitalize"> <span> </span>{{this.td1}}</h5>
+ <hr class="featurette-divider">
+   <p class="text-capitalize"> <span> </span>{{this.td2}}</p>
+<hr class="featurette-divider">
+   <h5 class="text-capitalize"> <span> </span>{{this.td3}}</h5>
+<hr class="featurette-divider">
+   <p class="text-capitalize"> <span> </span> {{this.td4}}</p>
+ <hr class="featurette-divider">
+       <a class="btn btn-info" role="button" href='/courses' >BACK</a>
+
+   {{/infoss2}}
+</div>
+
+
+  </div>
+  </form>
+
+
+
+          <hr class="featurette-divider">
+          </div>
+
+          <!-- ../{{this.uploadmarksheet}}  -->

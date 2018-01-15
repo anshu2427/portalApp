@@ -1,0 +1,22 @@
+/* yygyd */
+ .navbar {
+      padding-top: 9.5px;
+      padding-bottom: 9.5px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 15.2px;
+      letter-spacing:0px;
+	  font-weight: 560;
+  }
+
+  .navbar-brand {
+	 font-size: 16px;
+	 font-weight: 480;
+}
+
+
+.general-design {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+}

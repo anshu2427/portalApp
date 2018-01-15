@@ -1,0 +1,112 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-info">
+ <a href='/' >
+   <img class="first-slide" src="/images/UMA logo.png" alt="logo_utei"   width="52" height="52"></a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse align-bottom" id="navbarCollapse">
+    <ul class="nav nav-pills "> 
+      <li class="nav-item">
+        <a class="nav-link " id="home1" href="/">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/user/aboutus">About Us</a>
+      </li>
+     
+      <li class="nav-item">
+        <a class="nav-link" href="/registrationForm">Registration</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/user/result">Result</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/courses">Courses</a>
+      </li>
+
+      <div class="dropdown">
+        <button type="button" class="btn btn-lg btn-info  dropdown-toggle" data-toggle="dropdown">
+           General </button>
+        <div class="dropdown-menu dropdown-menu-right">
+
+          <a class="dropdown-item" href="/user/general">ADMISSION RULES</a>
+         <a class="dropdown-item" href="/user/training"> TRAINING RULES</a>
+
+         </div>
+
+        </div>
+         
+       <li class="nav-item">
+  <button  class="btn btn-sm btn-info disabled"></button>
+</li>
+
+    <!--ggfvhgffjhhj-->
+    <li class="nav-item">
+       <div class="dropdown">
+        <button type="button" id="myButton" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+          Centers
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+         {{#each centerers}}
+         <a class="dropdown-item text-capitalize" role="button" href='/centerdetails/{{this._id}}' ><strong>{{this.centername}}</strong></a>
+         {{/each}}
+       </div>
+   </div>
+ </li>
+ <li class="nav-item">
+  <button  class="btn btn-sm btn-info disabled"></button>
+</li>
+<li class="nav-item">
+  <a class="btn btn-md btn-warning" href="/contactUs"><strong>Contact Us</strong></a>
+</li>
+<li class="nav-item">
+  <button  class="btn btn-sm btn-info disabled"></button>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+
+  <li class="nav-item">
+    <button type="button" class="btn btn-sm  btn-outline-white"><strong>Mobile: </strong>9454583301 , 9198202566 <br> <strong>Email: </strong>Umaanandnagar@gmail.com    </button>                              
+  </li>
+  <li class="nav-item">
+    <button  class="btn btn-sm btn-info disabled"></button>
+  </li>
+</ul>
+
+<ul class="nav navbar-nav navbar-right">
+<div class="dropdown">
+           {{# if login  }}
+        <button type="button" class="btn btn-sm btn-danger  dropdown-toggle" data-toggle="dropdown">
+           Logout </button>
+        <div class="dropdown-menu dropdown-menu-right">
+
+          <a class="btn btn-sm btn-success btn-block" href="/user/adminhome">ADMIN</a>
+         <a class="btn btn-sm btn-danger btn-block" href="/user/logout"> LOGOUT</a>
+
+         </div>
+          {{/if}}
+        </div>
+
+ </ul>
+ 
+</div>
+</nav>
+<script type="text/javascript">
+  document.getElementById("myButton").onclick = function () {
+    var currentLocation = window.location.href;
+    if( !currentLocation.includes("/centers"))
+      location.href = "/centers";
+  };
+</script>
+
+
+
+
+       
+
+       <!--  {{# if login  }}
+ <li class="nav-item"><a class="nav-link btn btn-sm btn-danger" href="/user/logout">Logout</a> </li>
+     {{/if}}
+-->

@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/stylesheets/registration.css" >
+  
+  <div class="container" style="width:780px"> 
+      {{#infoss2 }}
+ 
+<form class="form-control" method="post" action='/user/coursedetailAdmin/edit/{{this._id}}'>
+
+   <div class="form-group border border-info rounded-top clearfix">
+
+     <h2  class="text-center">Course Edit </h2>
+<hr class="featurette-divider">
+
+
+<br>
+
+<div class="card-text">
+
+     <label> Course Name :</label>
+   <input class="form-control" type="text" name="cn" value="{{this.cn}}">
+   <br>
+
+   <label for="contact"> Training:</label>
+  <input class="form-control" type="text" name="tsc" value="{{this.tsc}}">
+<br>
+
+ <label for="branch"> Branch Name :</label>
+<input class="form-control" type="text" name="bcn" value="{{this.bcn}}">
+<br>
+
+ <label for="course"> Description 1 :</label>
+<input class="form-control" type="text" name="td1" value="{{this.td1}}">
+<br>
+
+  <label for="training"> Description 2 :</label>
+ <input class="form-control" type="text" name="td2" value="{{this.td2}}">
+<br>
+
+ <label for="qualification"> Description 3 :</label>
+<input class="form-control" type="text" name="td3" value="{{this.td3}}">
+  <br>
+
+ <label for="dob"> Description 4 :</label>
+<input class="form-control" type="text" name="td4" value="{{this.td4}}">
+<br>
+ <input class="btn btn-info" type="submit" value="Submit">
+
+</div>
+
+
+  </div>
+  </form>
+    {{/infoss2}}
+
+
+          <hr class="featurette-divider">
+          </div>
+
+          <!-- ../{{this.uploadmarksheet}}  -->

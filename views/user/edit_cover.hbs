@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="/stylesheets/registration.css" >
+  
+  <div class="container" style="width:780px"> 
+      {{#infoss3 }}
+ 
+<form class="form-control" method="post" enctype="multipart/form-data" action='/user/coverdetailAdmin/edit/{{this._id}}'>
+
+   <div class="form-group border border-info rounded-top clearfix">
+
+     <h2  class="text-center">Cover Edit </h2>
+<hr class="featurette-divider">
+
+
+<br>
+
+<div class="card-text">
+
+     <label> Cover Text :</label>
+   <input class="form-control" type="text" name="covertext" value="{{this.covertext}}">
+   <br>
+
+   <label for="activeOrNot"> active Or Not:</label>
+   <input class="form-control" type="text" name="activeOrNot" value="{{this.activeOrNot}}">
+
+   <hr class="featurette-divider">
+
+
+
+  <label for="coverphoto"><strong>Cover Image:&nbsp;&nbsp;&nbsp; </strong> </label>
+  <input class="form-control" type="file" name="coverphoto" value="{{this.coverphoto}}" required="coverphoto">
+<br>
+ <input class="btn btn-info" type="submit" value="Submit">
+
+</div>
+
+
+  </div>
+  </form>
+    {{/infoss3}}
+
+
+          <hr class="featurette-divider">
+          </div>
+
+          <!-- ../{{this.uploadmarksheet}}  -->

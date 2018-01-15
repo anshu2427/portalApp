@@ -1,0 +1,97 @@
+<link href="/stylesheets/dashboard.css" rel="stylesheet">
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="/user/adminhome">Overview <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/user/addcover">Add Cover Photos &amp; News/Event</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/user/addcourse">Add New Course</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/user/addcenter">Add New Center</a>
+            </li>
+          </ul>
+
+          <ul class="nav nav-pills flex-column">
+           
+            <li class="nav-item">
+              <a class="nav-link" href="/user/showregistera">Show All Registrations</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="/user/shownewsa">Show News &amp; Event</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/showcenters">Show All Centers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/showcourse">Show All Courses</a>
+            </li>
+          </ul>
+
+          <ul class="nav nav-pills flex-column">
+             <li class="nav-item">
+              <a class="nav-link" href="/user/uploadresult">Upload Result</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/user/showuploadresulta">Show Upload Result</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/user/showcontact">Show Contact Us </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/user/adminsettings">Admin Settings</a>
+            </li>
+          </ul>
+        </nav>
+        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
+          <h2>Show All Centers</h2>
+          <div class="table-responsive">
+            <table class="table table-bordered table-dark">
+              <thead>
+                <tr>
+                 
+      <th scope="col">Center Name</th>
+      <th scope="col">Mobile No</th>
+      <th scope="col">Director's Name</th>
+      <th scope="col">Phone No</th>
+      <th scope="col">Email</th>
+      <th scope="col">Landmark</th>
+      <th scope="col">Address</th>
+      <th scope="col">Image</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Detele</th>
+
+
+      
+                </tr>
+              </thead>
+              <tbody>
+            {{# each centerers }}
+                <tr>
+      <td>{{this.centername}}</td>
+      <td>{{this.centermobile}}</td>
+      <td>{{this.directorname}}</td>
+      <td>{{this.centerphone}}</td>
+      <td>{{this.centeremail}}</td>
+      <td>{{this.centerlandmark}}</td>
+      <td>{{this.centeraddress}}</td>
+      <td> <img class="first-slide" src="../{{this.centerimage}}" alt="First slide"   width="61" height="51"></td>
+      <td><a class="btn btn-primary" role="button" href='/centerdetails1/{{this._id}}' >EDIT</a></td>
+        <td><a class="btn btn-danger delete-center" role="button" href='#' data-id={{this._id}} >DELETE</a></td>
+
+      
+                </tr>
+                       {{/each }}
+
+              </tbody>
+            </table>
+          </div>
+        </main>
+      </div>
+    </div>
