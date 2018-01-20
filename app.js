@@ -133,7 +133,7 @@ app.use(function(err, req, res, next) {
 
 
 // Start Server
-app.listen(3000, function(){
+app.listen(80, function(){
   console.log('Server started on port 80...');
 });
 
