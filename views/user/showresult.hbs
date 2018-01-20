@@ -23,16 +23,21 @@
    <h5 class="text-capitalize"> <span> <label for="rrollnumber"> Roll Number :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span> {{this.rrollnumber}}</h5>
 <hr class="featurette-divider">
    <h5 class="text-capitalize"> <span> <label for="ryear"> Year :&nbsp;&nbsp;&nbsp;&nbsp;</label></span> {{this.ryear}}</h5>
+    {{#if uploadmarksheet}}
  <hr class="featurette-divider">
 <label for="uploadmarksheet"><strong>Upload Marksheet :&nbsp;&nbsp;&nbsp; </strong> </label>
+   
   <div class="card" style="width:700px">
     <img class="card-img-top" src="../{{this.uploadmarksheet}}" alt="Card image" width="100" height="400">
   </div>
+       {{/if}}
+        {{# if uploadcertificate}}
    <hr class="featurette-divider">
 <label for="uploadmarksheet"><strong>Upload Certificate :&nbsp;&nbsp;&nbsp; </strong> </label>
   <div class="card" style="width:700px">
     <img class="card-img-top" src="../{{this.uploadcertificate}}" alt="Card image" width="100" height="400">
   </div>
+  {{/if}}
  <hr class="featurette-divider">
  <a class="btn btn-warning" role="button" href='/showresults/edit/{{this._id}}' >EDIT</a>
  <a class="btn btn-danger delete-showresult" role="button" href='#' data-id={{this._id}} >DELETE</a>

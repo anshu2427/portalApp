@@ -82,8 +82,16 @@
        <td>{{this.rdob}}</td>
        <td>{{this.rdoj}}</td>
        <td>{{this.rfathername}}</td>
+       {{#if uploadmarksheet}}
        <td> <img class="first-slide" src="../{{this.uploadmarksheet}}" alt="uploadmarksheet"   width="100" height="51"></td>
+       {{else}}
+       <td></td>
+       {{/if}}
+                  {{# if uploadcertificate  }}
        <td> <img class="first-slide" src="../{{this.uploadcertificate}}" alt="uploadcertificate"   width="100" height="51"></td>
+       {{else}}
+       <td></td>
+{{/if}}
 
         <td><a class="btn btn-primary" role="button" href='/showresults/{{this._id}}'>CLICK</a></td>
 

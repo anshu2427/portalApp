@@ -1,4 +1,7 @@
 <link href="/stylesheets/dashboard.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/BeatPicker.min.css"/>
+    <script src="/javascripts/jquery-1.11.0.min.js"></script>
+    <script src="/javascripts/BeatPicker.min.js"></script>
 
 <script language="JavaScript" type="text/javascript">
   window.history.forward();              
@@ -81,20 +84,46 @@
     <label for="ryear">&nbsp;Certification Completion Year (Session):</label>
     <input type="text" class="form-control" id="ryear" name="ryear" placeholder="Enter a valid year, like 2018. "></input><br>
     
-    <label for="rdob">&nbsp;Date of Birth:</label>
-    <input type="date" class="form-control" id="rdob" name="rdob" placeholder="Enter DOB"><br>
-    
-    <label for="rdoj">&nbsp;Date of Joining:</label>
-    <input type="date" class="form-control" id="rdoj" name="rdoj" placeholder="Enter a valid date of joining before present date."><br>
-
     <label for="rfathername">&nbsp;Father's Name:</label>
     <input type="text" class="form-control" id="rfathername" name="rfathername" placeholder="Enter Father's Name" required="rfathername"></input><br>
 
+    <label for="rdob">&nbsp;Date of Birth:</label>
+  <!--  <input type="date" class="form-control" id="rdob" name="rdob" placeholder="Enter DOB"><br>
+-->
+      <div class="sample">
+        <input type="text" 
+               id="rdob" 
+               name="rdob"
+               placeholder="  DD/MM/YYYY"
+               data-beatpicker="true"
+               data-beatpicker-position="['right','bottom']"
+               data-beatpicker-format="['DD','MM','YYYY'],separator:'/'"
+               data-beatpicker-module="footer,clear"
+               required="rdob"
+                />   </div> <br>
+
+
+    <label for="rdoj">&nbsp;Date of Joining:</label>
+   <!-- <input type="date" class="form-control" id="rdoj" name="rdoj" placeholder="Enter a valid date of joining before present date."><br>
+-->
+     <div class="sample">
+        <input type="text" 
+               id="rdoj" 
+               name="rdoj"
+               placeholder="  DD/MM/YYYY"
+               data-beatpicker="true"
+               data-beatpicker-position="['right','bottom']"
+               data-beatpicker-format="['DD','MM','YYYY'],separator:'/'"
+               data-beatpicker-module="footer,clear"
+               required="rdoj"
+                />   </div> <br>
+
+
     <label for="uploadmarksheet"><h5>&nbsp;Upload Marksheet :</h5>&nbsp;(Only support jpeg, jpg or png formats.)</label>
-    <input type="file" class="form-control" id="uploadmarksheet" name="uploadmarksheet" placeholder="Upload Marksheet" required="uploadmarksheet"></input><br>
+    <input type="file" class="form-control" id="uploadmarksheet" name="uploadmarksheet" placeholder="Upload Marksheet" ></input><br>
     
     <label for="uploadmarksheet"><h5>&nbsp;Upload Certificate :</h5>&nbsp;(Only support jpeg, jpg or png formats.)</label>
-    <input type="file" class="form-control" id="uploadcertificate" name="uploadcertificate" placeholder="Upload Certificate" required="uploadcertificate"></input>
+    <input type="file" class="form-control" id="uploadcertificate" name="uploadcertificate" placeholder="Upload Certificate"></input>
 
     <br>
     <button type="submit" class="btn btn-primary btn-block">Submit</button>

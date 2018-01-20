@@ -14,18 +14,22 @@
 <br>
 
 <div class="card-text">
-
-     <label> Course Name :</label>
-   <input class="form-control" type="text" name="cn" value="{{this.cn}}">
+       
+         <label> Course Name :</label>
+   <input class="form-control" type="text" name="maincoursename" value="{{this.maincoursename}}">
    <br>
 
-   <label for="contact"> Training:</label>
+     <label> Sub-course Name :</label>
+   <input class="form-control" type="text" name="subcoursename" value="{{this.subcoursename}}">
+   <br>
+
+   <label for="contact"> Duration:</label>
   <input class="form-control" type="text" name="tsc" value="{{this.tsc}}">
 <br>
 
- <label for="branch"> Branch Name :</label>
+ <!--<label for="branch"> Branch Name :</label>
 <input class="form-control" type="text" name="bcn" value="{{this.bcn}}">
-<br>
+<br>-->
 
  <label for="course"> Description 1 :</label>
 <input class="form-control" type="text" name="td1" value="{{this.td1}}">
@@ -42,6 +46,7 @@
  <label for="dob"> Description 4 :</label>
 <input class="form-control" type="text" name="td4" value="{{this.td4}}">
 <br>
+  <a class="btn btn-success" role="button" href='/showcourse' >BACK</a>
  <input class="btn btn-info" type="submit" value="Submit">
 
 </div>

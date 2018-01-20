@@ -8,7 +8,7 @@ var Schema = mongoose.Schema;
 var eventSchema = new Schema ({
 
 _id: mongoose.Schema.Types.ObjectId,
-coverphoto: {type: String, required: true},
+coverphoto: {type: String},
 covertext: {type: String, required: false},
 activeOrNot: {type: String, required: false}
 

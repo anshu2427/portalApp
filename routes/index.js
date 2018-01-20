@@ -62,7 +62,10 @@ var User = require('../models/user');
 router.get('/', function(req, res, next){
 	Event.find()
 	.then(function(doc){
-		res.render('user/home', {coverers: doc , title: 'Uma Technical Electronic Institute'});
+		 Center.find()
+ .then(function(doc2){
+		res.render('user/home', {centerers: doc2, coverers: doc , title: 'Uma Technical Electronic Institute'});
+	});
 	});
 });
 
@@ -70,21 +73,30 @@ router.get('/', function(req, res, next){
 router.get('/user/showregistera', isLoggedIn, function(req, res, next){
 	Register.find()
 	.then(function(doc){
-		res.render('user/showregister', {infos: doc , title: 'Show Register'});
+		 Center.find()
+ .then(function(doc2){
+		res.render('user/showregister', {centerers: doc2, infos: doc , title: 'Show Register'});
+	});
 	});
 });
 
 router.get('/user/showuploadresulta', isLoggedIn, function(req, res, next){
 	Result.find()
 	.then(function(doc){
-		res.render('user/showuploadresult', {resulters: doc , title: 'Show Upload Result'});
+		 Center.find()
+ .then(function(doc2){
+		res.render('user/showuploadresult', {centerers: doc2, resulters: doc , title: 'Show Upload Result'});
+	});
 	});
 });
 
 router.get('/user/showcontact', isLoggedIn, function(req, res, next){
 	Contact.find()
 	.then(function(doc){
-		res.render('user/showcontactusList', {contactform1: doc , title: 'Show Contact Us List'});
+		 Center.find()
+ .then(function(doc2){
+		res.render('user/showcontactusList', {centerers: doc2, contactform1: doc , title: 'Show Contact Us List'});
+	});
 	});
 });
 
@@ -93,7 +105,10 @@ router.get('/user/showcontact', isLoggedIn, function(req, res, next){
 router.get('/user/shownewsa', isLoggedIn, function(req, res, next){
 	Event.find()
 	.then(function(doc){
-		res.render('user/shownews', {coverers: doc , title: 'Show News / Cover Image'});
+		 Center.find()
+ .then(function(doc2){
+		res.render('user/shownews', {centerers: doc2, coverers: doc , title: 'Show News / Cover Image'});
+	});
 	});
 });
 
@@ -105,10 +120,19 @@ router.get('/showcenters', isLoggedIn, function(req, res, next){
 });
 
 
+
 router.get('/registrationForm', function(req, res, next){
 	Course.find()
-	.then(function(doc){
-		res.render('user/registration',{regist: doc , title: 'Registration Form'} );
+	.then(function(doc1){
+            Center.find()
+  .then(function(doc){
+      Center.find()
+ .then(function(doc2){
+    res.render('user/registration',{regist761: doc , regist: doc1, centerers: doc2,  title: 'Registration Form'} );
+
+ });
+  });
+
 	});
 });
 
@@ -124,7 +148,10 @@ router.get('/centers', function(req, res, next){
 router.get('/contactUs', function(req, res, next){
 	Contact.find()
 	.then(function(doc){
-		res.render('user/contactform', {contactform1: doc , title: 'Contact Us'});
+		  Center.find()
+ .then(function(doc2){
+		res.render('user/contactform', {contactform1: doc , centerers: doc2, title: 'Contact Us'});
+	});
 	});
 });
 
@@ -133,45 +160,69 @@ router.get('/contactUs', function(req, res, next){
 router.get('/courses', function(req, res, next){
 	Course.find()
 	.then(function(doc){
-		res.render('user/courses', {regist: doc , title: 'Courses Information'});
+		 Center.find()
+ .then(function(doc2){
+		res.render('user/courses', {regist: doc , centerers: doc2, title: 'Courses Information'});
+	});
 	});
 });
 
 router.get('/showcourse', isLoggedIn, function(req, res, next){
 	Course.find()
 	.then(function(doc){
-		res.render('user/showcourses', {regist: doc , title: 'Show Courses'});
+		 Center.find()
+ .then(function(doc2){
+		res.render('user/showcourses', {centerers: doc2, regist: doc , title: 'Show Courses'});
+	});
 	});
 });
 
 router.get('/adminsettings', isLoggedIn, function(req, res, next){
 	User.find()
 	.then(function(doc){
-		res.render('user/adminsettings', {userers: doc , title: 'Show Registered Admin Users'});
+		 Center.find()
+ .then(function(doc2){
+		res.render('user/adminsettings', {centerers: doc2, userers: doc , title: 'Show Registered Admin Users'});
+	});
 	});
 });
 
 
 router.get('/user/aboutus', function(req, res, next) {
-	res.render('user/aboutus', { title: 'About Us' });
+	 Center.find()
+ .then(function(doc2){
+	res.render('user/aboutus', {centerers: doc2, title: 'About Us' });
+});
 });
 
 router.get('/user/general', function(req, res, next) {
-	res.render('user/general', { title: 'Admission Rules' });
+	 Center.find()
+ .then(function(doc2){
+	res.render('user/general', {centerers: doc2, title: 'Admission Rules' });
+});
 });
 
 router.get('/user/training', function(req, res, next) {
-	res.render('user/training', { title: 'Training Rules' });
+	 Center.find()
+ .then(function(doc2){
+	res.render('user/training', {centerers: doc2, title: 'Training Rules' });
+});
 });
 
 
 router.get('/user/result', function(req, res, next) {
-	res.render('user/result', { title: 'Result Search' });
+	 Center.find()
+ .then(function(doc2){
+	res.render('user/result', {centerers: doc2, title: 'Result Search' });
+});
 });
 
 
 router.get('/user/getresult', function(req, res, next) {
-	res.render('user/getresult', { title: 'Get Result' });
+	 Center.find()
+ .then(function(doc2){
+	res.render('user/getresult', {centerers: doc2, title: 'Get Result' });
+});
 });
 
 
@@ -181,7 +232,7 @@ router.get('/user/getresult', function(req, res, next) {
 router.post('/user/getresults', function(req, res){
 	const id = req.params; 
 	console.log("inside post"+ "id = " + req.body.rollnumber);
-
+Center.find(function(err, doc2){
 	Result.find({rrollnumber:req.body.rollnumber, rdob:req.body.dob}, function(err, result){
 		if(err){
 			console.log(err);
@@ -189,10 +240,12 @@ router.post('/user/getresults', function(req, res){
 
 		} else{
 			console.log("inside else" + " " +res);
-			res.render('user/getresult', {result : result});
+			res.render('user/getresult', {result : result , centerers: doc2 });
 			console.log("result"+ " " +result);
 		}
 	});
+});
+
 
 });
 
@@ -278,9 +331,19 @@ router.post('/registrationForm', function(req, res, next){
  	const coverer = {
  		_id: new mongoose.Types.ObjectId(),
  		covertext: req.body.covertext,
- 		activeOrNot: req.body.activeOrNot,
- 		coverphoto: req.file.path
+ 		activeOrNot: req.body.activeOrNot
  	};
+
+   if(req.file != "" && req.file != undefined){
+coverer.coverphoto = req.file.path;
+} 
+if(req.file != "" && req.file != undefined) {
+errors = true;
+}
+
+
+
+
 
  	req.checkBody('covertext', 'Enter cover news or event').notEmpty();
  	req.checkBody('activeOrNot', 'Enter image is active or not').notEmpty();
@@ -374,16 +437,27 @@ router.post('/registrationForm', function(req, res, next){
  		rcourse: req.body.rcourse,
  		rfathername: req.body.rfathername,
  		rrollnumber: req.body.rrollnumber,
- 		ryear: req.body.ryear,
- 		uploadmarksheet: req.files['uploadmarksheet'][0].path,
- 		uploadcertificate: req.files['uploadcertificate'][0].path
+ 		ryear: req.body.ryear
  	};
 
+
+if(req.files['uploadmarksheet'] != "" && req.files['uploadmarksheet'] != undefined){
+resulter.uploadmarksheet = req.files['uploadmarksheet'][0].path;
+}
+if(req.files['uploadcertificate'] != "" && req.files['uploadcertificate'] != undefined){
+resulter.uploadcertificate = req.files['uploadcertificate'][0].path;
+} 
+if((req.files['uploadcertificate'] != "" && req.files['uploadcertificate'] != undefined) && 
+(req.files['uploadmarksheet'] != "" && req.files['uploadmarksheet'] != undefined)) {
+errors = true;
+}
+
+
  	req.checkBody('rstudentname', 'Enter a valid student name.').notEmpty().isLength({ min: 3 , max:20});
- 	req.checkBody('rrollnumber', 'Enter a 6 digits valid roll number.').notEmpty().isNumeric().isLength({ min: 6 , max:10});
+ 	req.checkBody('rrollnumber', 'Enter a 8 digits valid roll number like MRJ12345.').notEmpty().isAlphanumeric().isLength({ min: 4 , max:8});
  	req.checkBody('ryear', 'Enter a valid year, like 2018.').notEmpty().isNumeric().isLength({ min: 4 , max:4});
- 	req.checkBody('rdob', 'Enter a valid date of birth. ').notEmpty().isBefore();
- 	req.checkBody('rdoj', 'Enter a valid date of joining.').notEmpty().isBefore();
+ 	req.checkBody('rdob', 'Enter a valid date of birth. ').notEmpty();
+ 	req.checkBody('rdoj', 'Enter a valid date of joining.').notEmpty();
 
 
 
@@ -415,11 +489,11 @@ router.post('/registrationForm', function(req, res, next){
  	console.log(req.body);
 
  	const regists = {
- 		maincoursename: req.body.maincourse,
- 		subcoursename: req.body.cn,
+ 		maincoursename: req.body.maincoursename,
+ 		subcoursename: req.body.subcoursename,
  		tsc: req.body.tsc,
  		tfscn: req.body.tfscn,
- 		bcn: req.body.bcn,
+ //		bcn: req.body.bcn,
  		td1: req.body.td1,
  		td2: req.body.td2,
  		td3: req.body.td3,
@@ -427,7 +501,7 @@ router.post('/registrationForm', function(req, res, next){
  	};
 
 
- 	req.checkBody('cn', 'Enter valid course name').notEmpty().isLength({ min: 3 , max:100});
+ 	req.checkBody('subcoursename', 'Enter valid sub course name').notEmpty().isLength({ min: 3 , max:100});
 
  	var errors = req.validationErrors();
  	var messages = req.flash('error');
@@ -507,8 +581,21 @@ res.render('user/edit_showresult', {infoss4: infoss4});
  	infoss4.rfathername = req.body.rfathername;
  	infoss4.rrollnumber = req.body.rrollnumber;
  	infoss4.ryear = req.body.ryear;
- 	infoss4.uploadmarksheet = req.files['uploadmarksheet'][0].path;
- 	infoss4.uploadcertificate = req.files['uploadcertificate'][0].path;
+ 
+
+
+if(req.files['uploadmarksheet'] != "" && req.files['uploadmarksheet'] != undefined){
+infoss4.uploadmarksheet = req.files['uploadmarksheet'][0].path;
+}
+if(req.files['uploadcertificate'] != "" && req.files['uploadcertificate'] != undefined){
+infoss4.uploadcertificate = req.files['uploadcertificate'][0].path;
+} 
+if((req.files['uploadcertificate'] != "" && req.files['uploadcertificate'] != undefined) && 
+(req.files['uploadmarksheet'] != "" && req.files['uploadmarksheet'] != undefined)) {
+errors = true;
+}
+
+
 
  	var query = {_id:req.params.id}
  	
@@ -590,22 +677,28 @@ router.delete('/registers/:id', function(req, res){
 
 
 router.get('/centerdetails/:id', function(req, res){
+	Center.find(function(err, doc2){
 	Center.findById(req.params.id, function(err, infoss1){
 //console.log(infoss);
 //return;
-res.render('user/centerdetail', {infoss1: infoss1});
+res.render('user/centerdetail', {centerers: doc2, infoss1: infoss1});
+});
+
 });
 
 });
 
 
 router.get('/coursedetails/:id', function(req, res){
+	Center.find(function(err, doc2){
 	Course.findById(req.params.id, function(err, infoss2){
 //console.log(infoss);
 //return;
-res.render('user/coursedetail', {infoss2: infoss2});
+res.render('user/coursedetail', {centerers: doc2, infoss2: infoss2});
 });
 
+});
+	
 });
 
 
@@ -680,10 +773,10 @@ res.render('user/edit_cover', {infoss3: infoss3});
 
 router.post('/user/coursedetailAdmin/edit/:id', function(req, res){
 	var infoss2 = {};
-	infoss2.cn = req.body.cn;
+	infoss2.maincoursename = req.body.maincoursename;
 	infoss2.tsc = req.body.tsc;
-	infoss2.tfscn = req.body.tfscn;
-	infoss2.bcn = req.body.bcn;
+	infoss2.subcoursename = req.body.subcoursename;
+//	infoss2.bcn = req.body.bcn;
 	infoss2.td1 = req.body.td1;
 	infoss2.td2 = req.body.td2;
 	infoss2.td3 = req.body.td3;
@@ -738,7 +831,14 @@ router.post('/user/coverdetailAdmin/edit/:id',  upload.single('coverphoto'), fun
 	
 	infoss3.activeOrNot = req.body.activeOrNot;
 	infoss3.covertext = req.body.covertext;
-	infoss3.coverphoto = req.file.path;
+
+
+   if(req.file != "" && req.file != undefined){
+infoss3.coverphoto = req.file.path;
+} 
+if(req.file != "" && req.file != undefined) {
+infoss3 = true;
+}
 
 	var query = {_id:req.params.id}
 	console.log(req.file);

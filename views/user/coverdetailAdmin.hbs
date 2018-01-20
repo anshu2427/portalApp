@@ -13,18 +13,17 @@
    <h5 class="text-capitalize"> <span> <label> Cover Text :&nbsp;&nbsp;&nbsp;</label></span> {{this.covertext}}</h5>
 <hr class="featurette-divider">
    <h5 class="text-capitalize"> <span> <label for="activeOrNot"> active Or Not :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></span>{{this.activeOrNot}}</h5>
-<hr class="featurette-divider
 
+{{#if coverphoto}}
  <hr class="featurette-divider">
  <label for="coverphoto"><strong>Cover Image :&nbsp;&nbsp;&nbsp; </strong> </label>
   <div class="card" style="width:700px">
     <img class="card-img-top" src="../{{this.coverphoto}}" alt="Card image" style="width:100%">
-    
   </div>
+    {{/if}}
+
+
    <hr class="featurette-divider">
-
-
-
  <a class="btn btn-warning" role="button" href='/coverdetails1/edit/{{this._id}}' >EDIT</a>
   <a class="btn btn-info" role="button" href='/user/shownewsa' >BACK</a>
 

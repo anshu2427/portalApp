@@ -23,6 +23,7 @@
      
         <div class="carousel-inner">
              {{# each coverers }}
+             {{#if coverphoto}}
            <div class="carousel-item {{this.activeOrNot}}">
             <img class="first-slide" src="../{{this.coverphoto}}" alt="First slide"  data-src="holder.js/500x500/auto">
             <div class="container">
@@ -31,6 +32,7 @@
               </div>     
             </div>
           </div>
+          {{/if}}
                {{/each}} 
         </div>
                

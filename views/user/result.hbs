@@ -1,6 +1,9 @@
 
   <link rel="stylesheet" href="/stylesheets/registration.css" >
-  
+    <link rel="stylesheet" href="/stylesheets/BeatPicker.min.css"/>
+    <script src="/javascripts/jquery-1.11.0.min.js"></script>
+    <script src="/javascripts/BeatPicker.min.js"></script>
+
  <div class="container" style="width:700px">  
 
 
@@ -16,10 +19,22 @@
         {{/if}}
 <hr class="featurette-divider">
   <label for="rollnumber">Roll Number:</label>
-      <input type="number" class="form-control" id="rollnumber" name="rollnumber" placeholder="Enter Roll Number" required="rollnumber">
+      <input type="text" class="form-control" id="rollnumber" name="rollnumber" placeholder="Enter Roll Number" required="rollnumber">  <!--   type change Number to text  -->
       <br>
-   <label for="dob">DOB:</label>
-      <input type="date" class="form-control" id="dob" name="dob" placeholder="Enter DOB" required="dob">
+   <label for="dob">Date of Birth:</label>
+    
+  <div class="sample">
+        <input type="text" 
+               id="dob" 
+               name="dob"
+               placeholder="  DD/MM/YYYY"
+               data-beatpicker="true"
+               data-beatpicker-position="['right','bottom']"
+               data-beatpicker-format="['DD','MM','YYYY'],separator:'/'"
+               data-beatpicker-module="footer,clear"
+               required="dob"
+                /> </div>
+
   <br>
    <button type="submit" class="btn btn-primary btn-block">Search</button>
   </div>

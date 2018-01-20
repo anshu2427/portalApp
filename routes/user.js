@@ -10,32 +10,50 @@ var Event = require('../models/event');
 
 
 router.get('/adminhome', isLoggedIn, function(req, res, next) {
-    res.render('user/adminhome' , { title: 'Admin Panel' });
+   Center.find()
+ .then(function(doc2){
+    res.render('user/adminhome' , {centerers: doc2, title: 'Admin Panel' });
+  });
 });
 
 
 /* GET Admin pages. */
 
 router.get('/addcover', isLoggedIn , function(req, res, next) {
- res.render('user/addcover', { title: 'Add Cover' });
+   Center.find()
+ .then(function(doc2){
+ res.render('user/addcover', {centerers: doc2, title: 'Add Cover' });
+});
 });
 
 router.get('/addcenter', isLoggedIn , function(req, res, next) {
-  res.render('user/addcenter', { title: 'Add Center Detail' });
+   Center.find()
+ .then(function(doc2){
+  res.render('user/addcenter', {centerers: doc2, title: 'Add Center Detail' });
+});
 });
 
 router.get('/addcourse', isLoggedIn , function(req, res, next) {
     var messages = req.flash('error');
-    res.render('user/addcourse', {  title: 'Add Course Info' , messages: messages , hasErrors: messages.length > 0});
+     Center.find()
+ .then(function(doc2){
+    res.render('user/addcourse', {centerers: doc2,  title: 'Add Course Info' , messages: messages , hasErrors: messages.length > 0});
  // res.render('user/addcourse', { title: 'Add Course Info' });
+});
 });
 
 router.get('/addnews', isLoggedIn , function(req, res, next) {
-  res.render('user/addnews', { title: 'Add News And Events' });
+   Center.find()
+ .then(function(doc2){
+  res.render('user/addnews', {centerers: doc2, title: 'Add News And Events' });
+});
 });
 
 router.get('/adminsettings', function(req, res, next) {
-  res.render('user/adminsettings', { title: 'Admin Settings' });
+   Center.find()
+ .then(function(doc2){
+  res.render('user/adminsettings', {centerers: doc2, title: 'Admin Settings' });
+});
 });
 
 

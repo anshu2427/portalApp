@@ -69,7 +69,11 @@
 
     <tr>
       <td>{{this.covertext}}</td>
+      {{#if coverphoto}}
       <td> <img class="first-slide" src="../{{this.coverphoto}}" alt="First slide"   width="100" height="51"></td>
+      {{else}}
+      <td></td>
+        {{/if}}
       <td>{{this.activeOrNot}}</td>
        <td><a class="btn btn-primary" role="button" href='/coverdetails1/{{this._id}}' >EDIT</a></td>
        <td><a class="btn btn-danger delete-cover" role="button" href='#' data-id={{this._id}} >DELETE</a></td>

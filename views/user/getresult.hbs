@@ -4,7 +4,7 @@
 <form class="form-control">
 
    <div class="form-group border border-info rounded-top clearfix">
-
+{{#if result}}
      <h2  class="text-center">UTEI Result</h2>
 <hr class="featurette-divider">
 
@@ -32,23 +32,30 @@
 
 <div class="card" style="width:700px">
    {{#result}}
+    {{# if uploadmarksheet}}
     <img class="card-img-top" src="../{{this.uploadmarksheet}}" alt="Card image" style="width:100%">
     <div class="card-body" >
       <a href="../{{this.uploadmarksheet}}" class="btn btn-success" download="{{this.rstudentname}}_Marksheet.jpeg">Download Marksheet</a>
     </div>
+    {{/if}}
     {{/result}}
   </div>
   <div class="card" style="width:700px">
    {{#result}}
+   {{#if uploadcertificate}}
     <img class="card-img-top" src="../{{this.uploadcertificate}}" alt="Card image" style="width:100%">
     <div class="card-body" >
       <a href="../{{this.uploadcertificate}}" class="btn btn-success" download="{{this.rstudentname}}_Certificate.jpeg">Download Certificate</a>
+          {{/if}}
        <a class="btn btn-info" role="button" href='/user/result' >Result Recheck</a>
 
     </div>
     {{/result}}
   </div>
-
+   {{else}}
+   <h1 class="text-center"> No Result Found</h1><br>
+       <a class="btn btn-warning btn-block" role="button" href='/user/result' > Recheck Your Result</a>
+{{/if}}
   </div>
   </form>
  

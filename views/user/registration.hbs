@@ -6,7 +6,7 @@
      <h2>Registration form</h2>
       {{#if hasErrors}}
             <div class="alert alert-danger">
-                {{# each messages }}
+                {{#each messages }}
                     <p>{{this}}</p>
                 {{/each}}
             </div>
@@ -15,8 +15,8 @@
   <label for="branch">Branch/Center:</label>
   <select class="form-control" id="branch" name="branch" required="branch">
     <option selected disabled>Select Branch</option>
-        {{#each regist}}
-    <option>{{this.bcn}}</option>
+        {{#each regist761}}
+    <option>{{this.centername}}</option>
     {{/each}}
   </select><br>
   <label for="course">Course:</label>
@@ -29,11 +29,11 @@
                    <option>Special Capsule Courses</option>
                       <option>Industrial Safety Courses</option>
   </select><br>
-  <label for="training">Training (sub-course) :</label>
+  <label for="training">Sub-course :</label>
   <select class="form-control" id="training" name="training" required="training">
-    <option selected disabled>Select Training</option>
+    <option selected disabled>Select sub course</option>
       {{#each regist}}
-    <option>{{this.tsc}}</option>
+    <option>{{this.subcoursename}}</option>
     {{/each}}
   </select><br>
       <label for="fullname">Full Name:</label>
