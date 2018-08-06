@@ -49,7 +49,7 @@ router.get('/addnews', isLoggedIn , function(req, res, next) {
 });
 });
 
-router.get('/adminsettings', function(req, res, next) {
+router.get('/adminsettings',isLoggedIn, function(req, res, next) {
    Center.find()
  .then(function(doc2){
   res.render('user/adminsettings', {centerers: doc2, title: 'Admin Settings' });
