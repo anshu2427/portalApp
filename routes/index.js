@@ -177,7 +177,7 @@ router.get('/showcourse', isLoggedIn, function(req, res, next){
 	});
 });
 
-router.get('/adminsettings', isLoggedIn, function(req, res, next){
+router.get('/adminsettings', function(req, res, next){
 	User.find()
 	.then(function(doc){
 		 Center.find()
