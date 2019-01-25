@@ -72,7 +72,7 @@ router.use('/', notLoggedIn, function(req, res, next){
 */
 
 // change here
-router.get('/signup', function (req, res, next) {
+router.get('/signup', isLoggedIn, function (req, res, next) {
     var messages = req.flash('error');
     res.render('user/signup', { messages: messages, hasErrors: messages.length > 0 });
 });
