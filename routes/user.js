@@ -9,51 +9,51 @@ var Center = require('../models/center');
 var Event = require('../models/event');
 
 
-router.get('/adminhome', isLoggedIn, function(req, res, next) {
-   Center.find()
- .then(function(doc2){
-    res.render('user/adminhome' , {centerers: doc2, title: 'Admin Panel' });
-  });
+router.get('/adminhome', isLoggedIn, function (req, res, next) {
+    Center.find()
+        .then(function (doc2) {
+            res.render('user/adminhome', { centerers: doc2, title: 'Admin Panel' });
+        });
 });
 
 
 /* GET Admin pages. */
 
-router.get('/addcover', isLoggedIn , function(req, res, next) {
-   Center.find()
- .then(function(doc2){
- res.render('user/addcover', {centerers: doc2, title: 'Add Cover' });
-});
-});
-
-router.get('/addcenter', isLoggedIn , function(req, res, next) {
-   Center.find()
- .then(function(doc2){
-  res.render('user/addcenter', {centerers: doc2, title: 'Add Center Detail' });
-});
+router.get('/addcover', isLoggedIn, function (req, res, next) {
+    Center.find()
+        .then(function (doc2) {
+            res.render('user/addcover', { centerers: doc2, title: 'Add Cover' });
+        });
 });
 
-router.get('/addcourse', isLoggedIn , function(req, res, next) {
+router.get('/addcenter', isLoggedIn, function (req, res, next) {
+    Center.find()
+        .then(function (doc2) {
+            res.render('user/addcenter', { centerers: doc2, title: 'Add Center Detail' });
+        });
+});
+
+router.get('/addcourse', isLoggedIn, function (req, res, next) {
     var messages = req.flash('error');
-     Center.find()
- .then(function(doc2){
-    res.render('user/addcourse', {centerers: doc2,  title: 'Add Course Info' , messages: messages , hasErrors: messages.length > 0});
- // res.render('user/addcourse', { title: 'Add Course Info' });
-});
-});
-
-router.get('/addnews', isLoggedIn , function(req, res, next) {
-   Center.find()
- .then(function(doc2){
-  res.render('user/addnews', {centerers: doc2, title: 'Add News And Events' });
-});
+    Center.find()
+        .then(function (doc2) {
+            res.render('user/addcourse', { centerers: doc2, title: 'Add Course Info', messages: messages, hasErrors: messages.length > 0 });
+            // res.render('user/addcourse', { title: 'Add Course Info' });
+        });
 });
 
-router.get('/adminsettings',isLoggedIn, function(req, res, next) {
-   Center.find()
- .then(function(doc2){
-  res.render('user/adminsettings', {centerers: doc2, title: 'Admin Settings' });
+router.get('/addnews', isLoggedIn, function (req, res, next) {
+    Center.find()
+        .then(function (doc2) {
+            res.render('user/addnews', { centerers: doc2, title: 'Add News And Events' });
+        });
 });
+
+router.get('/adminsettings', isLoggedIn, function (req, res, next) {
+    Center.find()
+        .then(function (doc2) {
+            res.render('user/adminsettings', { centerers: doc2, title: 'Admin Settings' });
+        });
 });
 
 
@@ -61,7 +61,7 @@ router.get('/adminsettings',isLoggedIn, function(req, res, next) {
 //var csrfProtection = csrf();
 //router.use(csrfProtection);
 
-router.get('/logout', isLoggedIn, function(req, res, next) {
+router.get('/logout', isLoggedIn, function (req, res, next) {
     req.logout();
     res.redirect('/user/signin');
 });
@@ -72,9 +72,9 @@ router.use('/', notLoggedIn, function(req, res, next){
 */
 
 // change here
-router.get('/signup', isLoggedIn, function(req, res, next) {
+router.get('/signup', function (req, res, next) {
     var messages = req.flash('error');
-    res.render('user/signup', { messages: messages, hasErrors: messages.length > 0});
+    res.render('user/signup', { messages: messages, hasErrors: messages.length > 0 });
 });
 
 router.post('/signup', passport.authenticate('local.signup', {
@@ -83,9 +83,9 @@ router.post('/signup', passport.authenticate('local.signup', {
     failureFlash: true
 }));
 
-router.get('/signin', function(req, res, next) {
+router.get('/signin', function (req, res, next) {
     var messages = req.flash('error');
-    res.render('user/signin', { title: 'UTEI Sign In' , messages: messages, hasErrors: messages.length > 0});
+    res.render('user/signin', { title: 'UTEI Sign In', messages: messages, hasErrors: messages.length > 0 });
 });
 
 router.post('/signin', passport.authenticate('local.signin', {
@@ -107,10 +107,10 @@ function isLoggedIn(req, res, next) {
 }
 
 
-function notLoggedIn (req, res, next) {
-     if(!req.isAuthenticated()){
-       return next();
-     }
- res.redirect('/');
-  }
+function notLoggedIn(req, res, next) {
+    if (!req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/');
+}
 
